@@ -1,0 +1,19 @@
+$primary-color: #8e48a0;
+
+.custom-btn {
+  background-color: $primary-color;
+  border-radius: 0%;
+  border: none;
+  width: 100%;
+  &:hover {
+    background-color: #541564;
+  }
+
+  &:focus {
+    background-color: #541564;
+  }
+
+  &:active {
+    background-color: #541564;
+  }
+}
