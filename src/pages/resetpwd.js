@@ -19,7 +19,9 @@ function resetpwd() {
                 <Form.Control type="email" placeholder="Enter email" />
               </Form.Group>
 
-              <Btn name="Send a reset link" />
+              <Link to="/">
+                <Btn name="Send a reset link" />
+              </Link>
             </Form>
             <Col className="text-center pt-4">
               <p>
