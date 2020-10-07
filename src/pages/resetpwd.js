@@ -2,9 +2,9 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./resetpwd.scss";
 import { Container, Col, Row, Form, Button } from "react-bootstrap";
-import logo from "./logo.png";
 import Btn from "../components/btn";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
+import Logo from "../components/heading";
 
 function resetpwd() {
   return (
@@ -12,9 +12,7 @@ function resetpwd() {
       <Container>
         <Row className="d-flex justify-content-center">
           <Col className="col-md-6 card p-5">
-            <Col className="text-center pb-5">
-              <img src={logo} alt="tlogo" width="50%" />
-            </Col>
+            <Logo />
             <Form>
               <Form.Group controlId="formBasicEmail">
                 <Form.Label>Email address</Form.Label>
@@ -27,13 +25,9 @@ function resetpwd() {
               <p>
                 Check our FAQ page,
                 <span>
-                  <Router>
-                    <Link to="/">
-                      <Button variant="link" className="login__btn">
-                        Here
-                      </Button>
-                    </Link>
-                  </Router>
+                  <Button variant="link" className="resetpwd__btn">
+                    <Link to="/">Here </Link>
+                  </Button>
                 </span>
               </p>
             </Col>

@@ -1,4 +1,4 @@
-$primary-color: #8e48a0;
+@import "../scss/variables.scss";
 
 .custom-btn {
   background-color: $primary-color;
@@ -6,14 +6,17 @@ $primary-color: #8e48a0;
   border: none;
   width: 100%;
   &:hover {
-    background-color: #541564;
+    transition-duration: 0.4s;
+    transition-property: background-color;
+    background-color: $primary-color_dark;
   }
 
   &:focus {
-    background-color: #541564;
+    background-color: $primary-color_dark !important;
+    box-shadow: none !important;
   }
 
   &:active {
-    background-color: #541564;
+    background-color: $primary-color_dark;
   }
 }

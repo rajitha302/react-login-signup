@@ -2,8 +2,9 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./login.scss";
 import { Container, Col, Row, Form, Button } from "react-bootstrap";
-import logo from "./logo.png";
 import Btn from "../components/btn";
+import { Link } from "react-router-dom";
+import Logo from "../components/heading";
 
 function login() {
   return (
@@ -11,9 +12,7 @@ function login() {
       <Container>
         <Row className="d-flex justify-content-center">
           <Col className="col-md-6 card p-5">
-            <Col className="text-center pb-5">
-              <img src={logo} alt="tlogo" width="50%" />
-            </Col>
+            <Logo />
             <Form>
               <Form.Group controlId="formBasicEmail">
                 <Form.Label>Email address</Form.Label>
@@ -25,19 +24,21 @@ function login() {
                 <Form.Control type="password" placeholder="Password" />
                 <Col className="d-flex justify-content-end pr-0">
                   <Button variant="link" className="pr-0 login__btn--small">
-                    Forgot Password?
+                    <Link to="resetpwd">Forgot Password?</Link>
                   </Button>
                 </Col>
               </Form.Group>
 
-              <Btn name="Login" />
+              <Link to="/welcome">
+                <Btn name="Login" />
+              </Link>
             </Form>
             <Col className="text-center pt-4">
               <p>
                 Don't have an account yet?
                 <span>
                   <Button variant="link" className="login__btn">
-                    Register here
+                    <Link to="/register">Register here</Link>
                   </Button>
                 </span>
               </p>

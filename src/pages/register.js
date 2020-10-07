@@ -2,9 +2,9 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./register.scss";
 import { Container, Col, Row, Form, Button } from "react-bootstrap";
-import logo from "./logo.png";
 import Btn from "../components/btn";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
+import Logo from "../components/heading";
 
 function register() {
   return (
@@ -12,13 +12,15 @@ function register() {
       <Container>
         <Row className="d-flex justify-content-center">
           <Col className="col-md-6 card p-5">
-            <Col className="text-center pb-5">
-              <img src={logo} alt="tlogo" width="50%" />
-            </Col>
+            <Logo />
             <Form>
               <Form.Group controlId="formBasicEmail">
                 <Form.Label>Full Name</Form.Label>
-                <Form.Control type="text" placeholder="Enter your name" />
+                <Form.Control
+                  required
+                  type="text"
+                  placeholder="Enter your name"
+                />
               </Form.Group>
 
               <Form.Group controlId="formBasicEmail">
@@ -34,19 +36,17 @@ function register() {
                 <Form.Control type="password" placeholder="Password" />
               </Form.Group>
 
-              <Btn name="Signup" />
+              <Link to="/welcome">
+                <Btn name="Signup" />
+              </Link>
             </Form>
             <Col className="text-center pt-4">
               <p>
                 Already has an account?
                 <span>
-                  <Router>
-                    <Link to="/resetpwd">
-                      <Button variant="link" className="login__btn">
-                        Login here
-                      </Button>
-                    </Link>
-                  </Router>
+                  <Button variant="link" className="register__btn">
+                    <Link to="/"> Login here </Link>
+                  </Button>
                 </span>
               </p>
             </Col>

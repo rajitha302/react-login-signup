@@ -1,0 +1,10 @@
+@import "../scss/variables.scss";
+.welcome {
+  .welcome__btn {
+    background-color: $primary-color;
+    border: none;
+    a {
+      color: #fff;
+    }
+  }
+}
